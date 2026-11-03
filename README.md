@@ -10,7 +10,7 @@
 
 # AIMS (An Internet-based Advanced Management System)
 
-# is a DVD management application developed with Python.
+is a DVD management application written in Python for managing DVD purchases.
 
 # 
 

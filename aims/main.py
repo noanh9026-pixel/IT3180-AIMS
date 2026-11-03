@@ -14,7 +14,7 @@ class AIMS:
         self.dvds = [
             DVD("The Lion King", "Animation", 50000),
             DVD("Titanic", "Romance", 60000),
-            DVD("Avengers", "Action", 70000)
+            DVD("Avengers", "Action", 75000)
         ]
         self.cart = []
 

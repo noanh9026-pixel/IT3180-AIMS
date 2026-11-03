@@ -10,7 +10,7 @@
 
 # AIMS (An Internet-based Advanced Management System)
 
-# is a simple DVD management application developed using Python.
+# is a simple DVD shopping cart application written in Python.
 
 # 
 
@@ -91,6 +91,4 @@
 # 
 
 # Nguyen Hoang Oanh
-
-
 

@@ -45,6 +45,18 @@ class AIMS:
 
         print(f"Total: {total:,} VND")
 
+    def search_dvd(self):
+        keyword = input("Enter DVD title to search: ")
+        found = False
+
+        for dvd in self.dvds:
+            if keyword.lower() in dvd.title.lower():
+                dvd.display()
+                found = True
+
+        if not found:
+            print("DVD not found!")
+
 
 def main():
     app = AIMS()
@@ -54,6 +66,7 @@ def main():
         print("1. Show DVDs")
         print("2. Add DVD to cart")
         print("3. Show cart")
+        print("4. Search DVD")
         print("0. Exit")
 
         choice = input("Your choice: ")
@@ -64,6 +77,8 @@ def main():
             app.add_to_cart()
         elif choice == "3":
             app.show_cart()
+        elif choice == "4":
+            app.search_dvd()
         elif choice == "0":
             print("Goodbye!")
             break

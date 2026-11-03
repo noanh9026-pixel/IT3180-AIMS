@@ -35,15 +35,37 @@ class AIMS:
 
         print("DVD not found!")
 
+    
     def show_cart(self):
         print("\n--- YOUR CART ---")
+
+        if not self.cart:
+            print("Your cart is empty!")
+            return
+
         total = 0
 
         for dvd in self.cart:
             dvd.display()
             total += dvd.price
 
-        print(f"Total: {total:,} VND")
+        quantity = len(self.cart)
+
+        if quantity >= 3:
+            discount_rate = 0.15
+        elif quantity >= 2:
+            discount_rate = 0.10
+        else:
+            discount_rate = 0
+
+        discount = total * discount_rate
+        final_total = total - discount
+
+        print(f"Subtotal: {total:,.0f} VND")
+        print(f"Discount: {discount_rate * 100:.0f}%")
+        print(f"Discount amount: {discount:,.0f} VND")
+        print(f"Final total: {final_total:,.0f} VND")
+
 
     def search_dvd(self):
         keyword = input("Enter DVD title to search: ")
